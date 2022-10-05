@@ -57,7 +57,7 @@ export default function Connect(props){
 			router.push("/")
 		}, 1000)
 	  })
-    }, [props])
+    }, [props, router])
     
     return(
       <div>
