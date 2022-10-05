@@ -1,0 +1,131 @@
+.container{
+    position: fixed;
+}
+
+.heading{
+    width: calc(40vw - 3rem);
+    font-size: 2.5rem;
+    color: #ff8c32;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.message_form{
+    padding: 1rem;
+    width: 40vw;
+    max-width: 80rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.input_cont{
+    max-width: inherit;
+    display: flex;
+    flex-direction: column;
+    width: calc(40vw - 3rem);
+    margin-bottom: 0.75rem;
+    /* height: fit-content; */
+}
+.input_cont_pair{
+    width: calc(20vw - 1.875rem);
+}
+.form_input{
+    max-width: inherit;
+    border: none;
+	background-color: rgba(128, 128, 128, 0.2);
+    min-height: 2.5rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    outline-width: 0;
+}
+
+.name, .email{
+    width: inherit;
+}
+.margin_r{
+    margin-right: 0.75rem;
+}
+.subject{
+    width: inherit;
+}
+.message{
+    width: inherit;
+    resize: none;
+    height: 25vh;
+}
+.submit{
+    width: 10rem;
+	height: 3.5rem;
+    background-color: transparent;
+    border: none;
+}
+.submit:hover{
+    cursor: pointer;
+}
+.darken{
+    filter: brightness(0.5);
+}
+
+.input_border{
+    width: 0;
+    height: 3px;
+    background-color: #ff8c32;
+    transition: width 0.3s ease-in-out;
+}
+
+.form_input:focus ~ .input_border{
+    width: 100%;
+}
+
+.submit_emote{
+    position: relative;
+    top: -6.25rem;
+    left: -3rem;
+    z-index: -10;
+}
+.submit_text{
+    font-size: 1.25rem;
+    position: relative;
+    top: -14.1rem;
+    left: 0.5rem;
+}
+
+@media only screen and (max-width: 850px){
+    .heading{
+        margin-top: 1.5rem;
+        width: 100vw;
+        /* overflow: hidden; */
+    }
+    .message_form{
+        width: 100vw;
+    }
+    .input_cont{
+        width: calc(100vw - 2rem);
+    }
+    .margin_r{
+        margin-right: 0;
+    }
+    .message{
+        height: 2.75rem;
+    }
+    .submit_emote{
+        top: -4.25rem;
+        left: -2rem;
+    }
+    .submit_text{
+        top: -9.65rem;
+        left: -1rem;
+    }
+
+}
+
+@media only screen and (max-height: 500px){
+	.heading{
+        margin-top: 0rem;
+	}
+    .container{
+		height: calc(100vh - 3rem);
+	}
+}
+

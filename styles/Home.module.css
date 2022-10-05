@@ -1,129 +1,171 @@
-.container {
-  padding: 0 2rem;
+.container{
+	position: absolute;
+	top: 9rem;
+	width: 100vw;
+	height: calc(100vh - 14rem);
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	margin-top: 5rem;
+	transition: opacity 0.4s 1s;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.intro{
+	display: flex;
+	margin: 0;
+	color: #cccccc;
+	padding: 1.25rem;
+	padding-top: 2rem;
+	font-size: 1.75rem;
+	transition: opacity 0.8s 1s;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+
+.intro p{
+	margin:0;
+	width: max-content;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.roller{
+	z-index: 100;
+	color: #FF8c32;
+	width: max-content;
+	display: flex;
+	transition: all 0.3s ease-in-out;
+}
+.roller span{
+	max-width: calc(100vw - 2.5rem);
+	word-wrap: normal;
+}
+.roller:before {
+	content : "";
+	position: absolute;
+	left    : 0;
+	bottom  : 0;
+	height  : 2px;
+	width   : 0%;
+	border-bottom:2px solid #FF8c32;
+	transition: width 0.3s ease-in-out;
+}
+.roller:hover:before{
+	width: 100%;
+}
+.roller:hover{
+	transform: translateY(-5px);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.emote{
+	display: block;
+	position: absolute;
+	right: 5%;
+	bottom: calc(50% + 4.5rem);
+	transform: translateY(50%);
+	transition: opacity 0.8s ease-in-out 1.5s;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.about{
+	font-size: 3rem;
+	display: flex;
+	margin: 0;
+	color: #cccccc;
+	padding: 1.25rem;
+	padding-top: 10vh;
+	transition: opacity 0.4s 2.5s;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.about_buttons{
+	display: flex;
+	max-width: calc(100vw - 2.5rem);
+	width: 28rem;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.about_buttons button{
+	cursor: pointer;
+	font-size: 1.35rem;
+	outline: none;
+	border-radius: 0.3rem;
+	width: 10rem;
+	height: 3.5rem;
+	transition: all 0.3s ease-in-out;
+	margin: auto;
 }
 
-.title,
-.description {
-  text-align: center;
+.about_resume{
+	background-color: #FF8c32;
+	border: none;	
+}
+.about_buttons button:hover, .about_buttons button:active{
+	transform: scale(1.05);
+	box-shadow: 0px 0px 10px 1px #FF8c32;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.about_connect{
+	cursor: pointer;
+	font-size: 1.75rem;
+	color: #FF8c32;
+	background-color: rgba(128, 128, 128, 0.2);
+	outline: none;
+	border: 2px solid #FF8c32;
+	border-radius: 0.3rem;
+	width: 10rem;
+	height: 3.5rem;
+	transition: all 0.3s ease-in-out;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+@media only screen and (max-width: 850px) {
+	.container{
+		padding: 0;
+	}
+	.emote{
+		right: 50%;
+		bottom: 20%;
+		transform: translate(50%, 0)
+	}
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+
+@media only screen and (max-width: 450px){
+	.container{
+		top: 6rem;
+	}
+	.intro{
+		top: 6rem;
+		flex-direction: column;
+	}
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+@media only screen and (max-height: 600px){
+	.container{
+		top: 3rem;
+	}
+	.emote{
+		bottom: 5%;
+	}
 }
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+@media only screen and ((orientation: portrait) or (max-height: 500px)) and (max-width: 850px){
+	.container{
+		margin-top: 0;
+	}
+	.about{
+		padding-top: 2vh;
+		font-size: 12vw;
+	}
+	.about p{
+		margin-top: 0;
+		margin-bottom: 5vh;
+	}
+	.about_buttons button{
+		font-size: 5vw;
+		width: 30vw;
+		height: 11vw;
+	}
 }
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+@media only screen and (max-height: 500px){
+	.container{
+		margin-top: 2rem;
+		height: calc(100vh - 3rem);
+		overflow-y: scroll;
+	}
 }
