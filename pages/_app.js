@@ -23,6 +23,18 @@ function MyApp({ Component, pageProps }) {
   <div>
     <Head>
     <meta name="theme-color" content="#06113c"></meta>
+    <meta name="description" content="Official portfolio site of BuddyLongLegs (Anurag Jain). Anurag is a student at IIIT Allahabad and Web Development enthusiast."></meta>
+    <meta name="robots" content="index, follow"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta charset="UTF-8"></meta>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@AnuragJ46055219" />
+    <meta name="twitter:creator" content="@AnuragJ46055219" />
+    <meta property="og:url" content="http://buddylonglegs.live" />
+    <meta property="og:title" content="BuddyLongLegs" />
+    <meta property="og:description" content="Official portfolio site of BuddyLongLegs (Anurag Jain). Anurag is a student at IIIT Allahabad and Web Development enthusiast." />
+    <meta property="og:image" content="http://buddylonglegs.live/bll_header.png" />
     </Head>
     <div className="bg">
       <div className="circle"></div>

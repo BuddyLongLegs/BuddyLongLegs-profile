@@ -18,7 +18,7 @@ async function confirm(email, name){
     text: ``,
     html: `
     Hello <strong>${name}</strong>,<br/>
-    Thank you for connecting with me. I have recieved your message and I will be contacting ASAP.<br/><br/>
+    Thank you for connecting with me. I have recieved your message and I will be contacting you ASAP.<br/><br/>
     Regards<br/>
     Anurag Jain
     `,
