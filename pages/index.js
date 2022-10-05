@@ -11,6 +11,8 @@ export default function Home(props) {
   const ref = useRef(null);
   let [width, setWidth] = useState("30rem");
   
+
+  useEffect(()=>{
   let fadein = [
     {opacity: 0},
     {opacity: 0.25},
@@ -20,8 +22,6 @@ export default function Home(props) {
     duration: 800,
     iterations: 1
   };
-
-  useEffect(()=>{
     import("@lottiefiles/lottie-player");
     if(typeof window !== undefined){
       if(window.innerWidth < 850 || window.innerHeight < 600){
@@ -73,7 +73,7 @@ export default function Home(props) {
           </div>
           <div id="about" className={[styles.about, styles2.invisible].join(" ")}>
               <p>
-                I'm a<span style={{color: "#FF8c32"}}> Web Developer!</span>
+                I&apos;m a<span style={{color: "#FF8c32"}}> Web Developer!</span>
               </p>
               <div className={styles.about_buttons}>
                 <button onClick={()=>{router.push('/resume');}} id='resume' className={styles.about_resume}>Resume</button>
