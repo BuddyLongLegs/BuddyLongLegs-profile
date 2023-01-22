@@ -10,17 +10,18 @@ export default function Connect(props){
       handleAnimation(props);
     }, [props])
     
-    return(
+    return (
       <div>
         <Head>
           <title>Resume · BuddyLongLegs</title>
         </Head>
-        <div className={[styles2.container, styles1.invisible, styles.cont].join(" ")}>
-        <iframe
-          src="/Resume_6_Oct_2022.pdf"
-          className={styles.pdf}
-        ></iframe>
+        <div
+          className={[styles2.container, styles1.invisible, styles.cont].join(
+            " "
+          )}
+        >
+          <iframe src="/Resume-22-01-2023.pdf" className={styles.pdf}></iframe>
         </div>
-      </div>     
-    )
+      </div>
+    );
 }
