@@ -16,7 +16,7 @@ export default function Connect(props) {
         <title>Resume · BuddyLongLegs</title>
       </Head>
       <div className={[styles2.container, styles1.invisible, styles.cont].join(" ")}>
-        <iframe src="/Resume_7_Jul_2023.pdf" className={styles.pdf}></iframe>
+        <iframe src="/Resume_14_Jul_2023.pdf" className={styles.pdf}></iframe>
       </div>
     </div>
   );
